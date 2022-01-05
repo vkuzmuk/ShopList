@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class NoteItem(
 
     @PrimaryKey (autoGenerate = true)
-    val int: Int?,
+    val id: Int?,
 
     @ColumnInfo (name = "title")
     val title: String,
