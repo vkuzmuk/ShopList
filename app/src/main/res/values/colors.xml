@@ -11,9 +11,11 @@
     <!--main-->
     <color name="orange_primary">#FFBA52</color>
     <color name="orange_dark">#ca9b52</color>
+    <color name="orange_background">#FFE1B3</color>
+    <color name="orange_second_background">#FBC182</color>
 
     <!--secondary-->
     <color name="orange_secondary">#ff9800</color>
     <color name="orange_secondary_dark">#c66900</color>
-    <color name="gray_light">#CFCFCF</color>
+    <color name="gray_light">#E4E4E4</color>
 </resources>

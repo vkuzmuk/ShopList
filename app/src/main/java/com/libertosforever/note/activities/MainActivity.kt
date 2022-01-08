@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.new_item -> {
-
+                    FragmentManager.currentFrag?.onClickNew()
                 }
             }
             true
