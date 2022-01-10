@@ -18,4 +18,13 @@
     <color name="orange_secondary">#ff9800</color>
     <color name="orange_secondary_dark">#c66900</color>
     <color name="gray_light">#E4E4E4</color>
+    
+    <!--color set-->
+    <color name="gray_picker">#919191</color>
+    <color name="green_picker">#00C853</color>
+    <color name="blue_picker">#0091EA</color>
+    <color name="red_picker">#D50000</color>
+    <color name="yellow_picker">#FFD600</color>
+    <color name="orange_picker">#FF6D00</color>
+    <color name="black_picker">#000000</color>
 </resources>
