@@ -2,7 +2,7 @@ package com.libertosforever.note.db
 
 import androidx.lifecycle.*
 import com.libertosforever.note.entities.NoteItem
-import com.libertosforever.note.entities.ShoppingListName
+import com.libertosforever.note.entities.ShopListNameItem
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
@@ -10,22 +10,22 @@ class MainViewModel(database: MainDatabase): ViewModel() {
     val dao = database.getDao()
 
     val allNotes: LiveData<List<NoteItem>> = dao.getAllNotes().asLiveData()
-    val allShopListNames: LiveData<List<ShoppingListName>> = dao.getAllShopListNames().asLiveData()
+    val allShopListNamesItem: LiveData<List<ShopListNameItem>> = dao.getAllShopListNames().asLiveData()
 
     fun insertNote(note: NoteItem) = viewModelScope.launch {
         dao.insertNote(note)
     }
 
-    fun insertShopListName(listName: ShoppingListName) = viewModelScope.launch {
-        dao.insertShopListName(listName)
+    fun insertShopListName(listNameItem: ShopListNameItem) = viewModelScope.launch {
+        dao.insertShopListName(listNameItem)
     }
 
     fun updateNote(note: NoteItem) = viewModelScope.launch {
         dao.updateNote(note)
     }
 
-    fun updateListName(shopListName: ShoppingListName) = viewModelScope.launch {
-        dao.updateListName(shopListName)
+    fun updateListName(shopListNameItem: ShopListNameItem) = viewModelScope.launch {
+        dao.updateListName(shopListNameItem)
     }
 
     fun deleteNote(id: Int) = viewModelScope.launch {
