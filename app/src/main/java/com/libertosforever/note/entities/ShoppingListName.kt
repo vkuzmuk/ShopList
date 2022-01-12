@@ -21,7 +21,7 @@ data class ShoppingListName(
     val allItemCounter: Int,
 
     @ColumnInfo(name = "checkedItemsCounter")
-    val checkedItemsCounter: String,
+    val checkedItemsCounter: Int,
 
     @ColumnInfo(name = "itemsIds")
     val itemIds: String,

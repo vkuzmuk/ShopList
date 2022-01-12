@@ -21,6 +21,7 @@ import com.libertosforever.note.entities.NoteItem
 import com.libertosforever.note.fragments.NoteFragment
 import com.libertosforever.note.utils.HtmlManager
 import com.libertosforever.note.utils.MyTouchListener
+import com.libertosforever.note.utils.TimeManager
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -164,7 +165,7 @@ class NewNoteActivity : AppCompatActivity() {
             null,
             binding.edTitle.text.toString(),
             HtmlManager.toHtml(binding.edDescription.text),
-            getCurrentTime(),
+            TimeManager.getCurrentTime(),
             ""
         )
     }
@@ -174,11 +175,6 @@ class NewNoteActivity : AppCompatActivity() {
             title = edTitle.text.toString(),
             content = HtmlManager.toHtml(edDescription.text)
         )
-    }
-
-    private fun getCurrentTime(): String {
-        val formatter = SimpleDateFormat("hh:mm - yyyy/MM/dd", Locale.getDefault())
-        return formatter.format(Calendar.getInstance().time)
     }
 
     private fun actionBarSettings() {

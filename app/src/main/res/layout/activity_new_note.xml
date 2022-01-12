@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange_background"
+    android:background="@color/gray_light"
     tools:context=".activities.NewNoteActivity">
 
     <androidx.cardview.widget.CardView
@@ -24,7 +24,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/orange_second_background"
+            android:background="@color/white"
             android:padding="5dp">
 
             <EditText
@@ -34,8 +34,8 @@
                 android:ems="10"
                 android:hint="Title"
                 android:inputType="textPersonName"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_light"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +49,8 @@
                 android:gravity="top"
                 android:hint="Description"
                 android:inputType="textMultiLine|textPersonName"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_light"
                 android:textSize="16sp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"

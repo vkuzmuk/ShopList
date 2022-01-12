@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/orange_background">
+    android:background="@color/gray_light">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -21,7 +21,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/orange_second_background">
+            android:background="@color/white">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="TextView"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="TextView"
-                    android:textColor="@color/gray_light"
+                    android:textColor="@color/gray_picker"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:background="@null"
+                android:background="@color/red_picker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_delete" />

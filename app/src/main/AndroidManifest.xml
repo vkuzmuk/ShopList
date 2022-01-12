@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Note">
         <activity
+            android:name=".activities.ShopListActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.NewNoteActivity"
             android:exported="false"
             android:windowSoftInputMode="stateVisible|adjustResize" />
