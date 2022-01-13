@@ -2,6 +2,7 @@ package com.libertosforever.note.db
 
 import androidx.lifecycle.*
 import com.libertosforever.note.entities.NoteItem
+import com.libertosforever.note.entities.ShopListItem
 import com.libertosforever.note.entities.ShopListNameItem
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
@@ -12,12 +13,24 @@ class MainViewModel(database: MainDatabase): ViewModel() {
     val allNotes: LiveData<List<NoteItem>> = dao.getAllNotes().asLiveData()
     val allShopListNamesItem: LiveData<List<ShopListNameItem>> = dao.getAllShopListNames().asLiveData()
 
+    fun getAllItemsFromList(listId: Int): LiveData<List<ShopListItem>> {
+        return dao.getAllShopListItems(listId).asLiveData()
+    }
+
     fun insertNote(note: NoteItem) = viewModelScope.launch {
         dao.insertNote(note)
     }
 
     fun insertShopListName(listNameItem: ShopListNameItem) = viewModelScope.launch {
         dao.insertShopListName(listNameItem)
+    }
+
+    fun insertShopItem(shopListItem: ShopListItem) = viewModelScope.launch {
+        dao.insertItem(shopListItem)
+    }
+
+    fun updateListItem(item: ShopListItem) = viewModelScope.launch {
+        dao.updateListItem(item)
     }
 
     fun updateNote(note: NoteItem) = viewModelScope.launch {
@@ -32,8 +45,9 @@ class MainViewModel(database: MainDatabase): ViewModel() {
         dao.deleteNote(id)
     }
 
-    fun deleteShopListName(id: Int) = viewModelScope.launch {
-        dao.deleteShopListName(id)
+    fun deleteShopList(id: Int, deleteList: Boolean) = viewModelScope.launch {
+        if (deleteList) dao.deleteShopListName(id)
+        dao.deleteShopListItemsByListId(id)
     }
 
     class MainViewModelFactory(val database: MainDatabase): ViewModelProvider.Factory {

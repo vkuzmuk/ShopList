@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity (tableName = "shop_list_item")
-data class ShoppingListItem(
+data class ShopListItem(
 
     @PrimaryKey (autoGenerate = true)
     val id:Int?,
@@ -14,10 +14,10 @@ data class ShoppingListItem(
     val name: String,
 
     @ColumnInfo (name = "item_info")
-    val itemInfo: String?,
+    val itemInfo: String = "",
 
     @ColumnInfo (name = "item_checked")
-    val itemChecked: Int = 0,
+    val itemChecked: Boolean = false,
 
     @ColumnInfo (name = "listId")
     val listId: Int,

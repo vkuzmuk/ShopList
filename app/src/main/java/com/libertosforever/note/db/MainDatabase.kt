@@ -6,14 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.libertosforever.note.entities.LibraryItem
 import com.libertosforever.note.entities.NoteItem
-import com.libertosforever.note.entities.ShoppingListItem
+import com.libertosforever.note.entities.ShopListItem
 import com.libertosforever.note.entities.ShopListNameItem
 
 
 @Database (entities = [
     LibraryItem :: class,
     NoteItem :: class,
-    ShoppingListItem:: class,
+    ShopListItem:: class,
     ShopListNameItem:: class], version = 1)
 
 abstract class MainDatabase: RoomDatabase() {
