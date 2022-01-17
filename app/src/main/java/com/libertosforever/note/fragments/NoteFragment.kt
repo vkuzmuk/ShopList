@@ -2,15 +2,18 @@ package com.libertosforever.note.fragments
 
 import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.libertosforever.note.activities.MainApp
 import com.libertosforever.note.activities.NewNoteActivity
 import com.libertosforever.note.databinding.FragmentNoteBinding
@@ -22,6 +25,7 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
     private lateinit var binding: FragmentNoteBinding
     private lateinit var editLauncher: ActivityResultLauncher<Intent>
     private lateinit var adapter: NoteAdapter
+    private lateinit var defPref: SharedPreferences
 
     private val mainViewModel: MainViewModel by activityViewModels {
         MainViewModel.MainViewModelFactory((context?.applicationContext as MainApp).database)
@@ -51,9 +55,18 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
     }
 
     private fun initRcView() = with(binding) {
-        rcViewNote.layoutManager = LinearLayoutManager(activity)
-        adapter = NoteAdapter(this@NoteFragment)
+        defPref = PreferenceManager.getDefaultSharedPreferences(activity)
+        rcViewNote.layoutManager = getLayoutManager()
+        adapter = NoteAdapter(this@NoteFragment, defPref)
         rcViewNote.adapter = adapter
+    }
+
+    private fun getLayoutManager(): RecyclerView.LayoutManager {
+        return if (defPref.getString("note_style_key", "Grid") == "Linear") {
+            LinearLayoutManager(activity)
+        } else {
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        }
     }
 
     private fun observer() {

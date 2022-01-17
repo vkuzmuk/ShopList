@@ -8,20 +8,22 @@
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/drawable/ic_settings.xml" value="0.2490740740740741" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/activity_new_note.xml" value="0.264" />
+        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/activity_settings.xml" value="0.264" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/activity_shop_list.xml" value="0.264" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/delete_dialog.xml" value="0.264" />
-        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/edit_action_layout.xml" value="0.536" />
+        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/edit_action_layout.xml" value="0.4" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/edit_list_item_dialog.xml" value="0.4" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/fragment_note.xml" value="0.25416666666666665" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/fragment_shop_list_names.xml" value="0.264" />
-        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/list_name_item.xml" value="0.43573667711598746" />
+        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/list_name_item.xml" value="0.536" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/new_list_dialog.xml" value="0.264" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/note_list_item.xml" value="0.4" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/shop_library_list_item.xml" value="0.536" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/layout/shop_list_item.xml" value="0.536" />
-        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/menu/bottom_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/menu/bottom_menu.xml" value="0.264" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/menu/new_note_menu.xml" value="0.4" />
         <entry key="..\:/Coding/My Projects/Note/app/src/main/res/menu/shop_list_menu.xml" value="0.4" />
+        <entry key="..\:/Coding/My Projects/Note/app/src/main/res/xml/settings_preference.xml" value="0.4" />
       </map>
     </option>
   </component>

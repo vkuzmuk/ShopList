@@ -14,7 +14,7 @@
     <color name="orange_background">#FFE1B3</color>
     <color name="orange_second_background">#FBC182</color>
 
-    <!--secondary-->
+    <!--secondary orange-->
     <color name="orange_secondary">#ff9800</color>
     <color name="orange_secondary_dark">#c66900</color>
     <color name="gray_light">#E4E4E4</color>
@@ -27,4 +27,10 @@
     <color name="yellow_picker">#FFD600</color>
     <color name="orange_picker">#FF6D00</color>
     <color name="black_picker">#000000</color>
+
+    <!--main blue-->
+    <color name="blue_primary">#0088ff</color>
+    <color name="blue_dark">#005ccb</color>
+
+
 </resources>

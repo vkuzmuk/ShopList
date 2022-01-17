@@ -8,7 +8,9 @@
         android:id="@+id/edNewShopItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:ems="10"
+        android:theme="@style/Theme.EditBlue"
         android:hint="New item"
         android:inputType="textPersonName" />
 </LinearLayout>

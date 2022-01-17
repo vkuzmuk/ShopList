@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.libertosforever.note.entities.LibraryItem
 import com.libertosforever.note.entities.NoteItem
 import com.libertosforever.note.entities.ShopListNameItem
 import com.libertosforever.note.entities.ShopListItem
@@ -21,6 +22,9 @@ interface Dao {
     @Query ("SELECT * FROM shop_list_item WHERE listId LIKE :listId")
     fun getAllShopListItems(listId: Int): Flow<List<ShopListItem>>
 
+    @Query ("SELECT * FROM library WHERE name LIKE :name")
+    suspend fun getAllLibraryItems(name: String): List<LibraryItem>
+
     @Query ("DELETE FROM shop_list_item WHERE listId LIKE :listId")
     suspend fun deleteShopListItemsByListId(listId: Int)
 
@@ -30,8 +34,14 @@ interface Dao {
     @Query ("DELETE FROM shopping_list_names WHERE id IS :id")
     suspend fun deleteShopListName(id: Int)
 
+    @Query ("DELETE FROM library WHERE id IS :id")
+    suspend fun deleteLibraryItem(id: Int)
+
     @Insert
     suspend fun insertNote(note: NoteItem)
+
+    @Insert
+    suspend fun insertLibraryItem(libraryItem: LibraryItem)
 
     @Insert
     suspend fun insertShopListName(nameItem: ShopListNameItem)
@@ -39,9 +49,11 @@ interface Dao {
     @Insert
     suspend fun insertItem(shopListItem: ShopListItem)
 
-
     @Update
     suspend fun updateNote(noteItem: NoteItem)
+
+    @Update
+    suspend fun updateLibraryItem(item: LibraryItem)
 
     @Update
     suspend fun updateListName(shopListNameItem: ShopListNameItem)

@@ -2,6 +2,7 @@ package com.libertosforever.note.dialogs
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.libertosforever.note.R
 import com.libertosforever.note.databinding.EditListItemDialogBinding
@@ -19,6 +20,7 @@ object EditItemListDialog {
         binding.apply {
             edName.setText(item.name)
             edInfo.setText(item.itemInfo)
+            if (item.itemType == 1) edInfo.visibility = View.GONE
             bUpdate.setOnClickListener {
                 if (edName.text.toString().isNotEmpty()) {
                     listener.onClick(item.copy(
