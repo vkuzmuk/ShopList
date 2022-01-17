@@ -3,4 +3,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="update">Update</string>
 
+    <!--ads-->
+    <string name="inter_ad_id">ca-app-pub-3940256099942544/1033173712</string>
 </resources>

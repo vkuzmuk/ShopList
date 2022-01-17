@@ -23,6 +23,7 @@
 
         <Preference
             android:title="Remove ads"
+            android:key="remove_ads_key"
             android:summary="Remove all ads from this app"
             android:icon="@drawable/ic_remove_ads"/>
     </PreferenceCategory>
